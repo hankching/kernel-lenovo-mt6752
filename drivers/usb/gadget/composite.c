@@ -546,7 +546,7 @@ static int bos_desc(struct usb_composite_dev *cdev)
 #ifdef CONFIG_USBIF_COMPLIANCE
 	usb_ext->bmAttributes = cpu_to_le32(USB_LPM_SUPPORT) | cpu_to_le32(USB_BESL_SUPPORT) ; 
 #else
-	usb_ext->bmAttributes = cpu_to_le32(USB_LPM_SUPPORT);
+	usb_ext->bmAttributes = cpu_to_le32(USB_LPM_SUPPORT | USB_BESL_SUPPORT);
 #endif
 
 	/*
